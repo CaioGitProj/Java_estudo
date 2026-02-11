@@ -6,6 +6,7 @@ public class Imagens
 {
     public static void main(String[] args)
     {
+
         Caixa caixa = new Caixa();
         DrawPanel draw = new DrawPanel();
 

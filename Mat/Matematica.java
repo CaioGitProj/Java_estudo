@@ -1,7 +1,11 @@
 package Mat;
 
+import java.security.SecureRandom;
+
 public class Matematica 
 {
+    public static SecureRandom randomNumbers = new SecureRandom();
+
     public static void main(String[] args)
     {
         System.out.println(Math.abs(23.7));// módulo do número
@@ -25,5 +29,12 @@ public class Matematica
         System.out.println(Math.sqrt(25));// Raiz quadrada ne x
 
         System.out.println(Math.tan(2));// tangente do ângulo de número x
+
+        double doubleValue = 4.5;
+        int intValue = (int)doubleValue; //Conversão
+        
+        System.out.println(intValue);
+
+        System.out.printf("%f Número aleatório gerado %n", randomNumbers.nextFloat(0,1));
     }
 }
