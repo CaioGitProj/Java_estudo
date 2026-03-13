@@ -44,6 +44,10 @@ public class Main
         catch(DomainException err){
             IO.println("Error in reservation: " + err.getMessage());
         }
+
+        catch(RuntimeException runtimeException){
+            IO.println("Unexpected error" + runtimeException.getMessage());
+        }
         sc.close();
     }
 }
