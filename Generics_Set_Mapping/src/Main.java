@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,6 +34,8 @@ public class Main
 
          */
 
+
+        /*
         List<Product> list = new ArrayList<>();
         String path = "/home/pc/Documentos/Java_Projects/in.txt";
 
@@ -52,6 +55,18 @@ public class Main
         }
         catch (IOException e) {
             throw new RuntimeException(e);
+        }
+
+         */
+
+        List<Integer> myInts = Arrays.asList(5,2,10);
+        printList(myInts);
+
+    }
+
+    public static void printList(List<?> list){
+        for(Object obj : list){
+            System.out.println(obj);
         }
     }
 }
