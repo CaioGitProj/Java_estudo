@@ -18,8 +18,13 @@ public class Main {
         list.removeIf((p) -> p.getPrice() >= 100.00);
         list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 
-        for (Product p : list) {
-            System.out.println(p);
-        }
+
+        // list.forEach(new PriceUpdate());
+        // list.forEach(Product::staticProductConsumer);
+        list.forEach((x) -> x.setPrice(x.getPrice() * 1.1));
+
+
+
+        list.forEach((x) -> System.out.printf("%.2f\n", x.getPrice()));
     }
 }
