@@ -27,9 +27,12 @@ public class Product
         this.price = price;
     }
 
-    public static boolean staticProductPredicate(Product p)
-    {
+    public static boolean staticProductPredicate(Product p) {
         return p.getPrice() >= 100;
+    }
+
+    public static void staticProductConsumer(Product p2) {
+        p2.setPrice(p2.getPrice() * 1.1);
     }
 
     @Override
