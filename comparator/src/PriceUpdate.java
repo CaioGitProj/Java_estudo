@@ -1,4 +1,9 @@
-package PACKAGE_NAME;
+import java.util.function.Consumer;
 
-public class PriceUpdate {
+public class PriceUpdate implements Consumer<Product> {
+
+    @Override
+    public void accept(Product p) {
+        p.setPrice(p.getPrice() * 1.1);
+    }
 }
