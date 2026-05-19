@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -12,6 +13,8 @@ public class Main {
         list.add(new Product("Tablet", 2500.0));
         list.add(new Product("HD case", 89.99));
 
+
+        /*
         list.removeIf(Product::staticProductPredicate);
 
 
@@ -19,12 +22,16 @@ public class Main {
         list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 
 
-        // list.forEach(new PriceUpdate());
-        // list.forEach(Product::staticProductConsumer);
+        list.forEach(new PriceUpdate());
+        list.forEach(Product::staticProductConsumer);
         list.forEach((x) -> x.setPrice(x.getPrice() * 1.1));
+        */
 
-
+        // List<String> listString = list.stream().map(new UpperCaseName()).toList();
+        // List<String> listString = list.stream().map(Product::staticUpperCaseName).toList();
+        List<String> listString = list.stream().map((x) -> x.getName().toUpperCase()).toList();
 
         list.forEach((x) -> System.out.printf("%.2f\n", x.getPrice()));
+        listString.forEach(System.out::println);
     }
 }

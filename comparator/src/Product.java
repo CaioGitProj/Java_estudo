@@ -31,8 +31,12 @@ public class Product
         return p.getPrice() >= 100;
     }
 
-    public static void staticProductConsumer(Product p2) {
-        p2.setPrice(p2.getPrice() * 1.1);
+    public static void staticProductConsumer(Product p) {
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
+    public static String staticUpperCaseName(Product p) {
+        return p.getName().toUpperCase();
     }
 
     @Override
