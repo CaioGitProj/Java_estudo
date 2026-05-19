@@ -1,4 +1,20 @@
-package PACKAGE_NAME;
+import java.util.List;
+import java.util.function.Predicate;
 
-public class ProductService {
+public class ProductService
+{
+    // Predicate: pega cada elemento da lista e testa uma condição e retorna verdadeiro ou falso
+
+    public double filteredSum(List<Product> list, Predicate<Product> criteria)
+    {
+        double sum = 0;
+        for(Product p : list)
+        {
+            if(criteria.test(p))
+            {
+                sum += p.getPrice();
+            }
+        }
+        return sum;
+    }
 }
