@@ -21,6 +21,22 @@ public class Main
         contato.setNome("Contato" + valor);
     }
 
+    // varargs :)
+    static int soma(int a, int b)
+    {
+        return a + b; //Sem Varargs :(
+    }
+
+    static int soma(Integer... vetor)
+    {
+        int total = 0;
+        for(int i =0; i < vetor.length; i++)
+        {
+            total += vetor[i];
+        }
+        return total; //Com Varargs :)
+    }
+
     public static void main(String[] args)
     {
         double a = 2;
@@ -53,5 +69,9 @@ public class Main
 
         System.out.println(contato);
         System.out.println(valor);
+
+
+        // ------VARARGS-------
+        System.out.println(soma(1,2,3,4,5,6,7));
     }
 }
